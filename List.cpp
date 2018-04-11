@@ -81,9 +81,9 @@ void List::deleteNode(Member * delData){
         if(!flag){
             size--;
         }
-        else{
+        /*else{
             cout << "Did not find " << delData->getName() << "'s profile in this list";
-        }
+        }*/
         
     }
 }

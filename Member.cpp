@@ -46,10 +46,10 @@ void Member::follow(Member m){
 
 void Member::unfollow(Member m){
     Member * tmp = &m;
-    cout << "before deleting from following" << endl;
+    //cout << "before deleting from following" << endl;
     following->deleteNode(tmp);
     
-    cout << "before deleting from followers" << endl;
+    //cout << "before deleting from followers" << endl;
     m.followers->deleteNode(this);
     
 }
