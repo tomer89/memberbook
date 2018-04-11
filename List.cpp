@@ -33,8 +33,9 @@ void List::addNode(Member* addData){
         while(flag){
             //cout << temp->data->getId() << " == " << addData->getId() << "      flag is: "  << flag << endl;
             if(temp->data->getId() == addData->getId()){
-                if(temp->next != NULL)
+                if(temp->next != NULL){
                     temp = temp->next;
+                }
                 flag = false;
   
             }
@@ -48,6 +49,7 @@ void List::addNode(Member* addData){
         }
     }
 }
+
 
 void List::deleteNode(Member * delData){
     if(head != NULL){
@@ -72,6 +74,9 @@ void List::deleteNode(Member * delData){
                         temp->next = NULL;
                     }
                     
+                }
+                if(temp->next != NULL){
+                    temp = temp->next;
                 }
             }
             else{
