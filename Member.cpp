@@ -16,7 +16,7 @@ Member::Member(){
 }
 
 Member::~Member(){
-    countMembers--;
+    //countMembers--;
 }
 
 //a getter to get amount of people this member is following
