@@ -7,6 +7,7 @@ static int count;
 class Member{
     public:
         Member();
+        ~Member();
         void follow(Member m);
         void unfollow(Member);
         
