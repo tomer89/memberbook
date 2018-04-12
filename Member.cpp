@@ -15,6 +15,9 @@ Member::Member(){
     following = new List;
 }
 
+Member::~Member(){
+    countMembers--;
+}
 
 //a getter to get amount of people this member is following
 int Member::numFollowers(){

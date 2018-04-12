@@ -17,11 +17,12 @@ class List{
         int size = 0;
         
     public:
+        
         List();
         void addNode(Member* addData);
         void deleteNode(Member* delData);
         int getSize();
-        nodePtr getHead();
+        Member* getMemberOfPosition(int i);
         
         
 };

@@ -11,10 +11,10 @@ List::List(){
     //cout << "list const" << endl;
 }
 
-List::nodePtr List::getHead(){
+/*List::nodePtr List::getHead(){
     //for testing stuff
     return head;
-}
+}*/
 
 void List::addNode(Member* addData){
     bool flag = true;
@@ -99,6 +99,28 @@ void List::deleteNode(Member * delData){
 int List::getSize(){
     //cout << "checking List->getSize() \n";
     return size;
+}
+
+
+Member* List::getMemberOfPosition(int i){
+    temp = head;
+    Member* pm = temp->data;
+    
+    if(i == 0){
+        return pm;
+    }
+    int j = 0;
+    while(pm != NULL && j > i){
+        temp = temp->next;
+        pm = temp->data;
+        j++;
+        if(j == i){
+            return pm;
+        }
+    }
+    
+    // i was greater than size of list
+    return NULL;
 }
 /*
 //did similar to https://www.youtube.com/watch?v=H5lkmKkfjD0 
