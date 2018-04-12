@@ -16,15 +16,27 @@ void test1() {
 	cout << "  " << Member::count() << endl; // 4
 	
 }
-
+/*
 void unfollow_without_following(){
 	cout << "entered test2" << endl;
 	Member Shira;
 	Shira.unfollow(avi);
-}
+}*/
 
 int main() {
 
+/*	{
+		Member* tomer;
+		
+		tomer = &avi;
+		
+		cout << "111\n" <<Member::count() << endl; 
+		tomer->follow(beni);
+		
+		cout << "222\n"<< Member::count() << endl; 
+		tomer->unfollow(beni);
+		cout << "333\n"<< Member::count() << endl; 
+	}*/
 	cout << avi.numFollowers() << " " << avi.numFollowing() << endl; // 0 0
 	cout << avi.getId() << endl;
 	cout << beni.getId() << endl;
@@ -46,7 +58,7 @@ int main() {
 
 	cout << chana.numFollowers() << " " <<  chana.numFollowing() << endl; // 0 0
 	test1();
-	unfollow_without_following();
+	//unfollow_without_following();
 	
 	cout << chana.numFollowers() << " " <<  chana.numFollowing() << endl; // 0 0
 	cout << avi.numFollowers() << " " <<  avi.numFollowing() << endl; // 0 0

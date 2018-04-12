@@ -9,14 +9,18 @@ static int countMembers = 0;
     
 Member::Member(){
 
-    id = countMembers;
+    
     countMembers++;
+    id = countMembers;
     followers = new List;
     following = new List;
+    
+    cout << id << endl;
 }
 
 Member::~Member(){
-    //countMembers--;
+    // << "Member destructer" << endl;
+    countMembers--;
 }
 
 //a getter to get amount of people this member is following
@@ -41,13 +45,24 @@ void Member::follow(Member m){
     Member * tmp = &m;
     following->addNode(tmp);
     m.followers->addNode(this);
+    //cout << "who do I destroy here?\n"<< Member::count() << endl; 
+    countMembers++;
+    
+    
+    
 }
 
 
 void Member::unfollow(Member m){
+            
     Member * tmp = &m;
+
     following->deleteNode(tmp);
+
     m.followers->deleteNode(this);
+    
+    //cout << "who do I destroy here?\n"<< Member::count() << endl; 
+    countMembers++;
     
 }
 
